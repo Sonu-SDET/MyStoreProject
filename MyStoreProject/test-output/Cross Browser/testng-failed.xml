@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [Cross Browser]" guice-stage="DEVELOPMENT">
+  <test thread-count="3" parallel="tests" name="ChromeBrowser(failed)">
+    <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.mystore.testcases.IndexPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="loadConfig"/>
+          <include name="loadConfigOld"/>
+          <include name="myStoreLogoTest"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.IndexPageTest -->
+    </classes>
+  </test> <!-- ChromeBrowser(failed) -->
+  <test thread-count="3" parallel="tests" name="IEBrowser(failed)">
+    <parameter name="browser" value="edge"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.mystore.testcases.IndexPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="loadConfig"/>
+          <include name="loadConfigOld"/>
+          <include name="myStoreLogoTest"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.IndexPageTest -->
+    </classes>
+  </test> <!-- IEBrowser(failed) -->
+  <test thread-count="3" parallel="tests" name="FirefoxBrowser(failed)">
+    <parameter name="browser" value="Firefox"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.mystore.testcases.IndexPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="loadConfig"/>
+          <include name="loadConfigOld"/>
+          <include name="myStoreLogoTest"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- com.mystore.testcases.IndexPageTest -->
+    </classes>
+  </test> <!-- FirefoxBrowser(failed) -->
+</suite> <!-- Failed suite [Cross Browser] -->
